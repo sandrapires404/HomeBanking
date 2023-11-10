@@ -52,6 +52,7 @@ export class HomeComponent implements OnInit {
     }
   }
   addForm() {
+    //cria um movimento de depósito
     const dialogRef = this._dialog.open(FazerMovimentosComponent);
     dialogRef.afterClosed().subscribe({ //atualizar a página de movimentos automaticamente
       next: (val) => {
@@ -63,6 +64,7 @@ export class HomeComponent implements OnInit {
   }
 
   delForm() {
+    //cria um movimento de retirada de fundo
     const dialogRef = this._dialog.open(RetirarFundoComponent);
     dialogRef.afterClosed().subscribe({ //atualizar a página de movimentos automaticamente
       next: (val) => {
@@ -75,7 +77,8 @@ export class HomeComponent implements OnInit {
 
   }
 
-  getMovList() {
+  getMovList() { 
+    //insere os dados na tabela
     this._movService.getMovList().subscribe({
       next: (res) => {
         console.log(res);
@@ -90,7 +93,6 @@ export class HomeComponent implements OnInit {
           }
 
         }
-        console.log(total);
         alert("Valor atual: "+total+" €");
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
