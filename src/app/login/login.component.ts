@@ -32,10 +32,12 @@ export class LoginComponent {
     })
 
     onSubmit() {
+      //lê o id armazenado e compara com o inserido 
         this._movService.getIdList().subscribe({
             next: (res) => {
                 console.log(res.user);
                 console.log("o colocado é " , this.userForm.value);
+              //verifica se coincide
                 if (this.userForm.value.user == res.user && this.userForm.value.password == res.password) {
                     console.log("letz go");
                     this.router.navigate(['/home']);
