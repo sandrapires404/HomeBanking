@@ -1,0 +1,19 @@
+<div mat-dialog-title>
+    <h2>Depositar Fundo</h2>
+</div>
+<form [formGroup]="movForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content>
+    <mat-form-field appearance="outline">
+        <mat-label>Montante</mat-label>
+        <input matInput type="number" min="0.01" formControlName = "montante">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <input matInput type="text" formControlName = "descricao">
+      </mat-form-field>
+</div>
+<div mat-dialog-actions id="action_button">
+    <button mat-raised-button color="primary" type="submit" > Guardar </button>
+    <button mat-raised-button type="button" [mat-dialog-close]="false"> Cancelar</button>
+</div>
+</form>

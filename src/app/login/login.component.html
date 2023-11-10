@@ -1,0 +1,33 @@
+
+<div class="login_div" >
+  <h1 id="logo"> MY BANK</h1>
+  <hr>
+
+  <h2>Login</h2>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <h3>Enter your ID</h3>      
+    
+    <mat-form-field>
+      <mat-label id="loginentered">Enter your ID</mat-label>
+      <input matInput [type]="'text'"  name="username" type="text" id="login_entered" formControlName="user">
+    </mat-form-field>
+
+    </div>
+    <br>
+      <h3>Enter your Password</h3>      
+    <mat-form-field>
+      <mat-label>Enter your Password</mat-label>
+      <input matInput color="#003554" [type]="hide ? 'password' : 'text'" value="" id="password_entered" type='password' formControlName="password">
+    </mat-form-field>
+    <button color=" #051923" id="button_pass" type="button" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+   
+ 
+    <div class="button-submit">
+      <button mat-raised-button color="primary" label="submit"   type="submit">Enter</button>
+    </div>
+  </form> 
+ 
+</div>

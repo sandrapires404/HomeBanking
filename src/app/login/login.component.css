@@ -1,0 +1,33 @@
+.login_div{
+  padding-top:2%;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+
+}
+h1{
+  color: #0353a4;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+h2{
+  color: #001845;
+}
+h3{
+  color: #001845;
+}
+
+#button_pass{
+  top: 8px;
+  border: 0;
+}
+
+.button-submit{
+  text-align: center;
+
+}
+
+mat-label {
+  color: #3f37c9;
+}

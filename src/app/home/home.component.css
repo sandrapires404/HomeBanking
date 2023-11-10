@@ -1,0 +1,43 @@
+.example-spacer {
+    flex: 1 1 auto;
+    overflow-x:hidden ;
+  }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+ h2{
+  color: #0353a4;
+
+ }
+
+table{
+  width: 90%;
+  table-layout: fixed;
+  margin: 0 0.2%;
+  color: #001845;
+  
+
+}
+
+th, td {
+  width: 20%;
+  white-space: nowrap;
+  color: #001845;
+
+}
+
+mat-form-field{
+  margin: 0 0.2%;
+  overflow-x:hidden ;
+  color: #001845;
+
+}
+
+mat-label {
+  color: #001845;
+}
+mat-toolbar{
+  margin: 0 0.2%;
+}
