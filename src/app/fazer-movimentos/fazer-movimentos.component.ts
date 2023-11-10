@@ -19,6 +19,7 @@ constructor(private _fb: FormBuilder, private _movService: MovsService, private 
     
 })
 onFormSubmit(){
+  //envia os dados no formulário
   if(this.movForm.valid){
     this._movService.addMov(this.movForm.value).subscribe({
       next: (val: any) => {
